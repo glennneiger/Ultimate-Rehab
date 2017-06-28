@@ -1,0 +1,63 @@
+test:
+    frontend_private_ip: '127.0.0.1'
+    frontend_private_port: 4567
+    frontend_public_address: 'http://127.0.0.1:4567'
+    backend_ip: '127.0.0.1'
+    backend_port: 5000
+    scrypt_max_mem: 1048576 # 1*1024*1024
+    scrypt_max_time: 0.010
+    limited_subscription_days: 7
+    full_subscription_days: 365
+    full_subscription_price_cents: 7900
+    max_properties: 3
+    postgres_user: postgres
+    postgres_database_name: test
+    send_emails: false
+
+dev:
+    frontend_private_ip: '127.0.0.1'
+    frontend_private_port: 4567
+    frontend_public_address: 'http://127.0.0.1:4567'
+    backend_ip: '127.0.0.1'
+    backend_port: 5000
+    scrypt_max_mem: 1048576 # 1*1024*1024
+    scrypt_max_time: 0.010
+    limited_subscription_days: 7
+    full_subscription_days: 365
+    full_subscription_price_cents: 7900
+    max_properties: 15
+    postgres_user: postgres
+    postgres_database_name: test
+    send_emails: true
+
+char:
+    frontend_private_ip: '127.0.0.1'
+    frontend_private_port: 4567
+    frontend_public_address: 'http://ultimaterehab.charstarstar.com'
+    backend_ip: '127.0.0.1'
+    backend_port: 5000
+    scrypt_max_mem: 16777216 # 16*1024*1024
+    scrypt_max_time: 0.5
+    limited_subscription_days: 7
+    full_subscription_days: 365
+    full_subscription_price_cents: 7900
+    max_properties: 15
+    postgres_user: app
+    postgres_database_name: ultimaterehab
+    send_emails: true
+
+prod:
+    frontend_private_ip: '127.0.0.1'
+    frontend_private_port: 4567
+    frontend_public_address: 'https://ultimaterehabestimator.com'
+    backend_ip: '127.0.0.1'
+    backend_port: 5000
+    scrypt_max_mem: 16777216 # 16*1024*1024
+    scrypt_max_time: 0.5
+    limited_subscription_days: 7
+    full_subscription_days: 365
+    full_subscription_price_cents: 7900
+    max_properties: 15
+    postgres_user: app
+    postgres_database_name: ultimaterehab
+    send_emails: true

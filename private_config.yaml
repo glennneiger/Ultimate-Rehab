@@ -1,0 +1,5 @@
+email_server_address: smtp.office365.com
+email_server_port: 587
+email_user_name: sales@ultimaterehabestimator.com
+stripe_secret_key: sk_test_ePlnE0BAnrRsVTiflx3Xhj2p
+email_password: HighHardCheese22

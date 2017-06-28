@@ -1,0 +1,597 @@
+/* FIXME: Try this to do something nicer with the footer http://stackoverflow.com/questions/90178/make-a-div-fill-the-height-of-the-remaining-screen-space?rq=1 */
+@import url(https://fonts.googleapis.com/css?family=Roboto+Slab);
+body {
+    font-family: 'Roboto Slab',serif;
+}
+
+.arial-font {
+    font-family: 'Aria',sans-serif;
+}
+
+/* Welcome Page */
+div.welcome-white-container {
+    background-color: #fff;
+    margin-bottom: 10px;
+}
+
+div.welcome-blue-container {
+    background-color: #003764;
+}
+
+div.blueprint-house {
+    background: url('/static/images/blueprint_house.jpg');
+    background-size: contain;
+    background-repeat: no-repeat;
+    height: 400px;
+}
+
+h1.blue-house-title {
+    color: #B21E28;
+    text-transform: uppercase;
+    font-size: 2.4em;
+    margin-bottom: 5px;
+    font-weight: bold;
+}
+
+h2.blue-house-subtitle {
+    color: #003764;
+    text-transform: uppercase;
+    font-size: 1.2em;
+    margin-top: 5px;
+    margin-bottom: 5px;
+}
+
+button.blue-house-button {
+    background-color: #003764;
+    color: #fff;
+    height: 80px;
+    width: 100%;
+    border-radius: 10px;
+    margin-top: 10px;
+    font-size: 1.6em;
+    margin-top: 5px;
+}
+
+h1.yellow-house-title {
+    color: #B21E28;
+    text-transform: uppercase;
+    font-size: 2.4em;
+    width: 100%;
+    margin-top: 5px;
+    margin-bottom: 5px;
+}
+
+h2.yellow-house-subtitle {
+    color: #003764;
+    text-transform: uppercase;
+    font-size: 1.2em;
+    width: 100%;
+    margin-top: 5px;
+    margin-bottom: 5px;
+}
+
+h1.white-title {
+    color: #fff;
+    text-transform: uppercase;
+    font-size: 3.0em;
+    width: 100%;
+    margin-top: 5px;
+    margin-bottom: 5px;
+}
+
+h2.white-subtitle {
+    color: #fff;
+    text-transform: uppercase;
+    font-size: 1.2em;
+    width: 100%;
+    margin-top: 5px;
+    margin-bottom: 5px;
+}
+
+h3.white-little-text {
+    color: #fff;
+    text-transform: uppercase;
+    font-size: 0.8em;
+    width: 100%;
+    margin-top: 5px;
+    margin-bottom: 5px;
+}
+
+button.learn-more-button {
+    background-color: #fff;
+    color: #003764;
+    height: 30px;
+    width: 100%;
+    border-radius: 10px;
+    margin-top: 10px;
+    font-size: 1.0em;
+    margin-top: 5px;
+}
+
+/* Info Pages */
+div.house-on-money {
+    background: url('/static/images/house_on_money.jpg');
+    background-size: contain;
+    background-repeat: no-repeat;
+    height: 400px;
+}
+
+div.house-on-laptop {
+    background: url('/static/images/house_on_laptop.jpg');
+    background-size: contain;
+    background-repeat: no-repeat;
+    height: 325px;
+}
+
+div.house-on-calculator {
+    background: url('/static/images/house_on_calculator.jpg');
+    background-size: contain;
+    background-repeat: no-repeat;
+    height: 250px;
+}
+
+/* Private Header Navbar */
+.top-navbar-default {
+    background-color: #fff;
+    border-color: #fff;
+}
+
+.navbar-default .navbar-nav > li > a.top-navbar-heading-inactive,
+.navbar-default .navbar-nav > li > a:focus.top-navbar-heading-inactive {
+    font-size: 1.2em;
+    color: #003764;
+    background-color: #fff;
+    border-top-left-radius: 10px;
+    border-top-right-radius: 10px;
+}
+
+.navbar-default .navbar-nav > li > a.top-navbar-heading-active,
+.navbar-default .navbar-nav > li > a:focus.top-navbar-heading-active {
+    font-size: 1.2em;
+    color: #fff;
+    background-color: #003764;
+    border-top-left-radius: 10px;
+    border-top-right-radius: 10px;
+}
+
+.navbar-nav .open ul.dropdown-menu {
+    background-color: #003764;
+    border: 0px;
+}
+
+.navbar-default .navbar-nav .open .dropdown-menu > li > a {
+    background-color: #003764;
+    color: #fff;
+}
+.navbar-default .navbar-nav .open .dropdown-menu > li > a:hover,
+.navbar-default .navbar-nav .open .dropdown-menu > li > a:focus {
+    background-color: #fff;
+    color: #003764;
+}
+
+/* Public Header Navbar */
+.navbar-default #public-navbar .navbar-nav > li > a:hover,
+.navbar-default #public-navbar .navbar-nav > li > a:focus {
+    background-color: #fff;
+    color: #003764;
+}
+
+hr.large-blue-bar {
+  width: 100%;
+  height: 15px;
+  background-color: #003764;
+
+  margin-top: 0px;
+  border-top: 0px;
+}
+
+/* Footer Navbar */
+html {
+  position: relative;
+  min-height: 100%;
+}
+body {
+    margin-bottom: 150px;
+}
+
+footer.footer-white-text {
+    position: absolute;
+    bottom: 0;
+    width: 100%;
+    height: 100px;
+
+    background-color: #003764;
+    border-color: #003764;
+    margin-bottom: 0px;
+    border-radius: 0px;
+}
+
+.bottom-navbar-white-text {
+    background-color: #003764;
+    border-color: #003764;
+    margin-bottom: 0px;
+    border-radius: 0px;
+}
+
+ul.bottom-navbar-white-text-ul {
+    width: 100%;
+    text-align: center;
+}
+
+li.bottom-navbar-white-text-li {
+    float: none;
+    display: inline-block;
+    color: #fff;
+}
+
+.navbar-default .navbar-nav > li.bottom-navbar-white-text-li > a,
+.navbar-default .navbar-nav > li.bottom-navbar-white-text-li > a:hover,
+.navbar-default .navbar-nav > li.bottom-navbar-white-text-li > a:focus {
+    color: #fff;
+}
+
+footer.footer-blue-text {
+    position: absolute;
+    bottom: 0;
+    width: 100%;
+    height: 55px;
+
+    background-color: #fff;
+    border-color: #fff;
+    margin-bottom: 0px;
+    border-radius: 0px;
+}
+
+.bottom-navbar-blue-text {
+    background-color: #fff;
+    border-color: #fff;
+    margin-bottom: 0px;
+    border-radius: 0px;
+}
+
+ul.bottom-navbar-blue-text-ul {
+    width: 100%;
+    text-align: center;
+}
+
+li.bottom-navbar-blue-text-li {
+    float: none;
+    display: inline-block;
+    color: #fff;
+}
+
+.navbar-default .navbar-nav > li.bottom-navbar-blue-text-li > a,
+.navbar-default .navbar-nav > li.bottom-navbar-blue-text-li > a:hover,
+.navbar-default .navbar-nav > li.bottom-navbar-blue-text-li > a:focus {
+    color: #003764;
+}
+
+/* Public Header Navbar */
+.top-public-navbar-default {
+    background-color: #003764;
+    border-color: #003764;
+    border-radius: 0px;
+}
+
+.navbar-default .navbar-nav > li.top-public-navbar-li > a,
+.navbar-default .navbar-nav > li.top-public-navbar-li> a:hover,
+.navbar-default .navbar-nav > li.top-public-navbar-li> a:focus {
+    color: #fff;
+}
+
+/* ROOMS */
+button:focus > span.room-glyphicon {
+  color: #fff;
+}
+
+.room-page-header {
+  color: #003764;
+}
+
+div.room-header-row {
+  background: #003764;
+  border-radius: 10px;
+  color: #fff;
+  text-transform: uppercase;
+}
+
+div.room-header-row > h1 {
+    font-size: 1.2em;
+    margin-top: 14px;
+}
+
+div.room {
+    border-style: solid;
+    border-width: 1px;
+    border-color: #ABACB5;
+    border-radius: 10px;
+}
+
+.room-section-header {
+  background: #003764; /* For browsers that do not support gradients */
+  background: -webkit-linear-gradient(left, #003764, #fff); /* For Safari 5.1 to 6.0 */
+  background: -o-linear-gradient(right, #003764, #fff); /* For Opera 11.1 to 12.0 */
+  background: -moz-linear-gradient(right, #003764, #fff); /* For Firefox 3.6 to 15 */
+  background: linear-gradient(to right, #003764, #fff); /* Standard syntax */
+
+  color: #fff;
+  text-transform: uppercase;
+  border-radius: 5px;
+  padding-top: 10px;
+  padding-right: 5px;
+  padding-left: 20px;
+  padding-bottom: 5px;
+}
+
+button:hover > span.room-glyphicon {
+  color: #B21E28;
+}
+
+button:focus > span.room-glyphicon {
+  color: #fff;
+}
+
+/* PROPERTIES */
+
+.property-page-header {
+  color: #003764;
+}
+
+div.property-header-row {
+  background: #B21E28;
+  border-radius: 10px;
+  color: #fff;
+  text-transform: uppercase;
+}
+
+div.property-header-row > h1 {
+    font-size: 1.2em;
+    margin-top: 14px;
+}
+
+div.property {
+    border-style: solid;
+    border-width: 1px;
+    border-color: #ABACB5;
+    border-radius: 10px;
+}
+
+.property-section-header {
+  background: #B21E28;
+
+  color: #fff;
+  text-transform: uppercase;
+  border-radius: 5px;
+  padding-top: 10px;
+  padding-right: 5px;
+  padding-left: 20px;
+  padding-bottom: 5px;
+}
+
+div.property-contents {
+  margin-top: 10px;
+  margin-bottom: 10px;
+}
+div.property-room-link {
+  background: #003764;
+  border-radius: 10px;
+  padding-top: 1px;
+  padding-bottom: 1px;
+}
+
+h1.property-room-link-header {
+  color: #fff;
+  text-transform: uppercase;
+  font-size: 1.0em;
+  margin-top: 10px;
+}
+
+button:hover > span.property-glyphicon {
+  color: #003764;
+}
+
+button:focus > span.property-glyphicon {
+  color: #fff;
+}
+
+/* Products Table */
+table.lite-table-table {
+    border: 0;
+    width: 100%;
+}
+
+tr.lite-table-tr-heading {
+    border: 0;
+}
+
+th.lite-table-th {
+    border: 0;
+    text-align: center;
+}
+tr.lite-table-tr {
+    border: 1px solid #ABACB5;
+}
+
+td.lite-table-td {
+    border: 1px solid #ABACB5;
+    text-align: center;
+}
+
+td.lite-table-td-left {
+    border: 1px solid #ABACB5;
+    text-align: left;
+}
+
+/* Measurements Table */
+tr.measurements-tr {
+    padding-bottom: 3px;
+}
+
+td.measurements-td {
+    padding-left: 3px;
+    padding-right: 3px;
+    padding-bottom: 5px;
+}
+
+.measurements-border {
+    outline: 1px solid #ABACB5;
+    padding-left: 3px;
+    padding-right: 3px;
+}
+
+/* MISC */
+hr.large-red-bar {
+  width: 45%;
+  height: 5px;
+  background-color: #B21E28;
+  /* margin-bottom: 35px; */
+}
+
+hr.small-red-bar {
+  width: 40%;
+  height: 3px;
+  background-color: #B21E28;
+  /* margin-bottom: 35px; */
+}
+
+hr.tiny-red-bar {
+  width: 75px;
+  height: 6px;
+  background-color: #B21E28;
+  margin-top: 0px;
+  margin-bottom: 0px;
+  border: none;
+}
+
+.text-white {
+  color: #fff;
+}
+
+button.blue-button {
+    background-color: #003764;
+    color: #fff;
+    border-radius: 10px;
+    margin-top: 10px;
+    font-size: 1.0em;
+    margin-top: 5px;
+    padding: 10px;
+    border: 0px;
+}
+
+button.greyed-button {
+    background-color: #cccccc;
+    color: #fff;
+    border-radius: 10px;
+    margin-top: 10px;
+    font-size: 1.0em;
+    margin-top: 5px;
+    padding: 10px;
+    border: 0px;
+}
+
+button.btn-primary-outline {
+  background-color: transparent;
+  border-color: transparent;
+  padding-top: 0px;
+  padding-left: 10px;
+  padding-right: 10px;
+}
+
+.vertical-align {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    height: 100vh;
+}
+
+h4.simulate-label {
+    font-size: 14px;
+    font-weight: 700;
+    line-height: 20px;
+    margin-bottom: 5px;
+}
+
+h4.room-measurements-hd {
+    font-size: 16px;
+    font-weight: 600;
+    color: #003764;
+}
+
+h3.financing-header {
+    background-color: #E85F53;
+    color: #fff;
+    border-radius: 10px;
+    padding-top: 5px;
+    padding-bottom: 5px;
+    text-align: center;
+}
+
+h3.total-costs-header {
+    background-color: #B21E28;
+    color: #fff;
+    border-radius: 10px;
+    padding-top: 5px;
+    padding-bottom: 5px;
+    text-align: center;
+}
+
+h3.profit-header {
+    background-color: #009944;
+    color: #fff;
+    border-radius: 10px;
+    padding-top: 5px;
+    padding-bottom: 5px;
+    text-align: center;
+}
+
+h1.info-title {
+    color: #003764;
+    text-transform: uppercase;
+    font-size: 3.0em;
+    width: 100%;
+    margin-top: 5px;
+    margin-bottom: 5px;
+    text-align: center;
+    font-weight: bold;
+}
+
+h1.info-title-small {
+    color: #003764;
+    text-transform: uppercase;
+    font-size: 2.0em;
+    width: 100%;
+    margin-top: 5px;
+    margin-bottom: 5px;
+    text-align: center;
+    font-weight: bold;
+}
+p.info {
+    color: #003764;
+    font-size: 1.3em;
+}
+
+.glyphicon.right-spinner {
+    -webkit-animation: glyphicon-spin 2s infinite linear;
+    animation: glyphicon-spin 2s infinite linear;
+}
+
+@-webkit-keyframes glyphicon-spin {
+    0% {
+        -webkit-transform: rotate(0deg);
+        transform: rotate(0deg);
+    }
+    100% {
+        -webkit-transform: rotate(359deg);
+        transform: rotate(359deg);
+    }
+}
+@keyframes glyphicon-spin {
+    0% {
+        -webkit-transform: rotate(0deg);
+        transform: rotate(0deg);
+    }
+    100% {
+        -webkit-transform: rotate(359deg);
+        transform: rotate(359deg);
+    }
+}

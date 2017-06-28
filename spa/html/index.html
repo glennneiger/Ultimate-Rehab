@@ -1,0 +1,92 @@
+<!--
+    NOTES
+    + To start ngrok: `ngrok http -subdomain=ultimaterehab 4567`
+    + https://github.com/lhorie/mithril.js/issues/1180
+-->
+
+<!doctype html>
+<title>Ulimate Rehab</title>
+<head>
+<meta charset="utf-8">
+<meta http-equiv="X-UA-Compatible" content="IE=edge">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<script src="https://checkout.stripe.com/checkout.js"></script>
+<script src="/static/js/mithril.min.js"></script>
+<script src="/static/js/jquery.min.js"></script>
+<script src="/static/js/bootstrap.min.js"></script>
+<link rel="stylesheet" href="/static/css/font-awesome.css">
+<link rel="stylesheet" href="/static/css/bootstrap.min.css">
+<link rel="stylesheet" href="/static/css/general.css">
+
+<script src="/static/js/remember_to_save.js"></script>
+<script src="/static/js/info.js"></script>
+<script src="/static/js/data.js"></script>
+<script src="/static/js/state_pricing.js"></script>
+<script src="/static/js/statement_of_work.js"></script>
+<script src="/static/js/bill_of_materials.js"></script>
+<script src="/static/js/deal_analyzer.js"></script>
+<script src="/static/js/settings.js"></script>
+<script src="/static/js/create_account.js"></script>
+<script src="/static/js/login_dialog.js"></script>
+<script src="/static/js/forgot_password_dialog.js"></script>
+<script src="/static/js/password_reset_finish.js"></script>
+<script src="/static/js/util.js"></script>
+<script src="/static/js/welcome.js"></script>
+<script src="/static/js/verify.js"></script>
+<script src="/static/js/rooms.js"></script>
+<script src="/static/js/properties.js"></script>
+<script src="/static/js/layout.js"></script>
+<script src="/static/js/public_layout.js"></script>
+<script src="/static/js/bottom_navbar.js"></script>
+</head>
+<body>
+    <script>
+        // initialize the application
+        m.route.prefix("");
+
+        // TODO: Maybe use RouteResolver.onmatch to handle auth?
+        //  + https://github.com/lhorie/mithril.js/blob/rewrite/docs/route.md#authentication
+        m.route(document.body, "/home", {
+            //
+            //  Public Pages
+            //
+            "/welcome": PublicLayout.layout(Welcome, true),
+            "/createAccount": PublicLayout.layout(CreateAccount, true),
+            "/verify" : PublicLayout.layout(Verify),
+            "/passwordReset/finish" : PublicLayout.layout(PasswordResetFinish),
+            "/info/aboutUs" : PublicLayout.layout(InfoAboutUs, true),
+            "/info/wholesalers" : PublicLayout.layout(InfoWholesalers, true),
+            "/info/rehabbers" : PublicLayout.layout(InfoRehabbers, true),
+
+            //
+            //  User Pages
+            //
+            "/home": CheckAuth(Layout.layout(Properties), [LIMITED_AUTH, FULL_AUTH]),
+            "/home/:propertyID": CheckAuth(Layout.layout(Properties), [LIMITED_AUTH, FULL_AUTH]),
+            "/settings": CheckAuth(Layout.layout(Settings), [UNVERIFIED_AUTH, SUSPENDED_AUTH, LIMITED_AUTH, FULL_AUTH]),
+            "/property/:propertyID/rooms": CheckAuth(Layout.layout(Rooms), [LIMITED_AUTH, FULL_AUTH]),
+            "/property/:propertyID/rooms/:roomID": CheckAuth(Layout.layout(Rooms), [LIMITED_AUTH, FULL_AUTH]),
+            "/property/:propertyID/statementOfWork": CheckAuth(Layout.layout(StatementOfWork), [LIMITED_AUTH, FULL_AUTH]),
+            "/property/:propertyID/billOfMaterials": CheckAuth(Layout.layout(BillOfMaterials), [LIMITED_AUTH, FULL_AUTH]),
+            "/property/:propertyID/dealAnalyzer": CheckAuth(Layout.layout(DealAnalyzer), [LIMITED_AUTH, FULL_AUTH]),
+        });
+
+        // Global
+        stripe_cb = null;
+        stripe_handler = StripeCheckout.configure(
+	{
+            key: 'pk_test_l2uihzmjOejLtpZ9aUb6yPjs',
+            image: 'https://stripe.com/img/documentation/checkout/marketplace.png',
+            locale: 'auto',
+            token: function(token) {
+                // You can access the token ID with `token.id`.
+                // Get the token ID to your server-side code for use.
+                console.log(token);
+
+                if (!!stripe_cb) {
+                    stripe_cb(token);
+                }
+            }
+        });
+    </script>
+</body>
